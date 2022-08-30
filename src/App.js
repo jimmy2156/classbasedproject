@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { render } from '@testing-library/react';
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+
+class App extends React.Component {
+  state = {
+    goOut: "Yes"
+  }
+  toggleHit = () => {
+    this.setState(
+      prevState => {
+        return {
+          goOut: prevState.goOut === "Yes" ? "No" : "Yes"
+        } 
+      }
+    )
+  }
+
+  
+  render() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <h1>hello how are u </h1>
+   
+    <Navbar name="gagan"/> 
+    <button onClick={this.toggleHit}>click here </button>
+    <h1>{this.state.goOut}</h1>
+    
     </div>
-  );
+  )}
 }
 
 export default App;
