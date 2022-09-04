@@ -1,11 +1,16 @@
-import React from "react"
+import Withtoggle from "../HOC/withToggle"
 
 
-class Navbar extends React.Component {
-    render() {
-        return (
-            <h1>{this.props.name}</h1>
-        )
-    }
+
+function Navbar(props) {
+   const {count, toggleon} = props
+   return (
+      <div>
+         <h1>{count}</h1>
+         <button onClick={toggleon}>count here</button>
+         <h1>{props.name}</h1>
+         
+      </div>
+   )
 }
-export default Navbar
+export default Withtoggle(Navbar)
