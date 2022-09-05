@@ -6,11 +6,9 @@ function Navbar(props) {
    const {count, toggleon} = props
    return (
       <div>
-         <h1>{count}</h1>
-         <button onClick={toggleon}>count here</button>
-         <h1>{props.name}</h1>
-         
+        <button onClick={toggleon} className="button1">{count ? "Show" : "Hide"}</button>
+        <h1 className={count ? "show" : "none"}>Menu for tonight</h1>
       </div>
    )
 }
-export default Withtoggle(Navbar)
+export default Withtoggle(Navbar, 6)

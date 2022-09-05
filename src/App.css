@@ -4,3 +4,19 @@
     box-sizing: border-box;
 
 }
+.button1 {
+    width: 60px;
+    height: 30px
+}
+.show {
+    display: block;
+}
+.none {
+    display: none;
+}
+.show1 {
+    display: block;
+}
+.show2 {
+    display: none;
+}

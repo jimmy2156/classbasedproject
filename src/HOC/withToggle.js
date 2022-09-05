@@ -4,9 +4,9 @@ import { useState } from "react"
 
 const Withtoggle = (WrappedComponent) => {
     function Withtoggle(props) {
-        const [count, setcount] = useState(0)
+        const [count, setcount] = useState(true)
         function toggleon() {
-            setcount(prevState => prevState + 1)
+            setcount(prevState => !prevState)
         }
     
     return (
