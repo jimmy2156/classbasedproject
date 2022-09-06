@@ -18,18 +18,17 @@ function App() {
 
     <Navbar />
 
-  
-    <Mainrender render={function(count1) {
-      return (<div> 
-        <h1 className={count1 ? "show1" : "show2"}> hello how are u </h1>
-        <h1>{count1 ?  "❤️" : "♡"}</h1>
-      
-     
-      </div>
-      
+   
+    <Mainrender  children={
+    function(data, newnum) {
+      return (<div>
+       <h1>{JSON.stringify(data.name)}</h1>
+       <h2>{JSON.stringify(data.films)}</h2>
+       <button onClick={newnum}>click here </button>
+       </div>
       )
-           
-    }} />
+    } 
+   }/>
    </div>
   )
 }
