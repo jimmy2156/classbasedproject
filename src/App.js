@@ -4,12 +4,22 @@ import './App.css';
 import React from 'react';
 import Mainrender from './components/Mainrender';
 import Navbar from './components/Navbar';
+import Grandparent from './components/purecomponenets';
+import { useState } from 'react';
 
 
 
 
 
-function App() {
+
+function App() { 
+  const [count, setcount] = useState(0)
+
+
+ function toggleon() {
+    setcount(prevState => prevState + 1)
+  }
+  
 
   return (
  
@@ -17,6 +27,8 @@ function App() {
     
 
     <Navbar />
+    <Grandparent count={count} />
+    <button onClick={toggleon}>click here </button>
 
    
     <Mainrender  children={
