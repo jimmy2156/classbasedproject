@@ -4,25 +4,53 @@
     box-sizing: border-box;
 
 }
-.button1 {
-    width: 60px;
-    height: 30px
+
+body {
+    background: black;
+    color: #00b800;
+    font-family: 'Press Start 2P', cursive;
 }
-.show {
-    display: block;
+textarea {
+    background: #00b800;
+    color: black;
+    padding: 20px;
+    font-size: 20px;
 }
-.none {
-    display: none;
+
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.show1 {
-    display: block;
+.heading1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 3.5rem;
 }
-.show2 {
-    display: none;
+.heading2 {
+    margin-top: 30px;
+    margin-right: 160px;
+    font-size: 3.5rem;
 }
-.show5 {
-    display: block;
+button {
+    background: #00b800;
+    color: black;
+    width: 180px;
+    height: 60px;
+    margin: 25px;
+    font-family: 'Press Start 2P', cursive;
+    font-style: 3.9rem;
+    padding: 0;
+} 
+.heading3 {
+    
+    margin-right: 310px;
+    font-size: 3.5rem;
 }
-.show6 {
-    display: none;
+.todolist {
+    background: white;
 }
